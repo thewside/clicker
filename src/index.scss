@@ -1,0 +1,44 @@
+@use 'sass:math';
+$trophy-size: 15vw;
+
+body{
+  background-color: rgb(121, 121, 121);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.score, .counter, .controlField, .overdriveField, .overdrive{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.buttonClick {
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+}
+.overdriveField{
+  height: 50px;
+  padding: 0px 15px 50px 25px;
+}
+.trophyField{
+	display: flex;
+	justify-content: space-evenly;
+	height: 30vh;
+	padding: 50px;
+}
+.trophyContainer{
+	max-width: 0;
+	overflow: visible;
+	position: relative;
+}
+
+.trophy{
+	position: absolute;
+	top: 0;
+	left: math.div(-$trophy-size, 2);
+	max-width: $trophy-size;
+	width: 100vw;
+}
